@@ -1,0 +1,21 @@
+server:
+  address: localhost
+  port: 8080
+  tomcat:
+    uri=encoding: UTF-8
+  jsp-servlet:
+    init-parameters:
+      development: ture
+      #development为true时，修改jsp不需要重启项目即可生效
+
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+  mvc:
+    static-path-pattern: /**
+      # 默认值为 classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+  http:
+    encoding:
+      force: true
+      enable: true
+      charset: UTF-8
