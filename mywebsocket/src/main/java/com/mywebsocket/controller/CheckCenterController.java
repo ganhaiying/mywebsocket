@@ -27,6 +27,7 @@ public class CheckCenterController {
     @RequestMapping("/socket/push/{cid}")
     public Result pushToWeb(@PathVariable String cid, String message) {
         try {
+            ModelAndView mav=new ModelAndView("/socket");
             WebSocketServer.sendInfo(message,cid);
         } catch (IOException e) {
             e.printStackTrace();
